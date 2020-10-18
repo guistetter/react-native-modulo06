@@ -1,8 +1,21 @@
 import React from 'react';
-import { View } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import { Container, Form, Input, SubmitButton } from './styles';
 
 export default function Main() {
-  return <View />;
+  return (
+    <Container>
+      <Form>
+        <Input autoCorret={false}
+        autoCapitalizar="none"
+        placeholder="Adicionar Usuario"
+        />
+        <SubmitButton>
+        <Icon name="add" size={20} color="#FFF"/>
+        </SubmitButton>
+      </Form>
+    </Container>
+  )
 }
 
 Main.navigationOptions = {
