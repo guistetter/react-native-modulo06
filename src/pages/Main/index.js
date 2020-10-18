@@ -17,11 +17,14 @@ export default class Main extends Component {
     return (
       <Container>
         <Form>
-          <Input autoCorret={false}
-          autoCapitalizar="none"
+          <Input
+          autoCorret={false}
+          autoCapitalize="none"
           placeholder="Adicionar Usuario"
           value={newUser}
           onChangeText={text => this.setState({newUser: text})}
+          returnKeyType="send"
+          onSubmitEditing={this.handleAddUser}
           />
           <SubmitButton onPress={this.handleAddUser}>
           <Icon name="add" size={40} color="#FFF"/>
